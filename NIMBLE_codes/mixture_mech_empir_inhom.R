@@ -1,7 +1,6 @@
 mixture_mech_empir_inhom <- nimbleCode({
   
   lambda0 ~ dgamma(10*lambda0_base,10)
-  
   gamma1 ~ dnorm(0,0.1)
   gamma2 ~ dnorm(0,0.1)
   
