@@ -6,9 +6,6 @@ mixture_mech_empir_basic <- nimbleCode({
   
   for (i in 1:N) {
     
-    # lambda[i] <- lambda0+theta*inprod(rep(1,n_previous[i]),exp(-(time_all[i]-time_events[1:n_previous[i]])/phi))
-    # lambda[i] <- lambda0+theta*inprod(rep(1,n_previous[i]),exp(-lista[[i]]/phi))
-    # aux[i] <- (time_all[i]-time_events[1:n_previous[i]])
     lambda[i] <- lambda0+theta*inprod(matrix_ones[i,],exp(-matrix_distances[i,]/phi))
     log(L[i]) <- I[i]*log(lambda[i])-w[i]*lambda[i] # I_i = 1 if event, 0 otherwise; w[i] = 'interval length' if partition point, 0 otherwise
     z[i] <- -log(L[i])+C
