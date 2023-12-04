@@ -26,12 +26,4 @@ mixture_mech_empir_poisCP_1change <- nimbleCode({
   }
   partition_changes[K+2] <- Tmax
   
-#  Mech[1] ~ dbern(0.5)
-#  for (k in 2:(K+1)){ # if we assume K change points, then we have K+1 intervals defined
-#    Mech[k] <- 1 - Mech[k-1]
-#  }
-  
-  
-  
-  
 })
