@@ -4,7 +4,6 @@ mixture_mech_empir_changepoints_1change <- nimbleCode({
   lambda0_Mech ~ dgamma(10*lambda0_base,10)
   theta ~ dunif(0,20)
   phi ~ dunif(0,50)
-  # phi ~ dgamma(7,1)
   
   for (i in 1:N) {
     
